@@ -1,0 +1,18 @@
+<html>
+   <body>
+      <form action = "{{ url_for('adduser') }}" method = "POST">
+         <h3>User Information</h3>
+         Name<br>
+         <input type = "text" name = "nm" /></br>
+         
+         Phone<br>
+         <input type = "text" name = "phone" /></br>
+         
+         Card<br>
+         <input type = "text" name = "card" /><br>
+         
+         <input type = "submit" value = "submit" /><br>
+      </form>
+      {% block content %}{% endblock %}
+   </body>
+</html>

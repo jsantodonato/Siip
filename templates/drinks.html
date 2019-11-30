@@ -1,0 +1,34 @@
+<html>
+    <head>
+            <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+            
+            <script type=text/javascript> 
+                $(function() {
+                $("#AddBeer").click(function(){
+                    $("#AddBeer").hide();
+                    $("#Prompt").show();
+                    $.ajax({
+                        url: '/AddDrink',
+                        dataType: 'json',
+                        success: function(data){console.log(data)
+                    $("#AddBeer").show();
+                    $("#Prompt").hide();
+                        }
+                    });
+    });
+    }
+    );
+            </script>
+            
+    </head>
+   <body>
+       
+     <button id="AddBeer" type="button">
+        Add Beer
+     </button>
+     <h1 id="Prompt" style="display: none;">SCAN CARD</h1>
+   </body>
+</html>
